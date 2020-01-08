@@ -1,0 +1,20 @@
+version:1.0.0.5:
+	1. Wifi Security Type = "OPEN" => Pass = ""
+	2. Wifi Security Type <> "OPEN" => Pass <> ""
+	
+version:1.0.0.4:
+	1. Add function Search tablet
+	2. Add filesize field to URL entity
+	
+version:1.0.0.3:
+	1. Check rerest when:
+    	+ Current  tracking != null and (tracking.version = null or url.version > tracking.version)
+     
+	2. Add new check update rule:
+   		+ (url != null && tracking.getTrkcurrentversion() == null)
+   		   
+version:1.0.0.2:
+	1. Add new property:latitude, longitude, radius to wifi 
+	2. Reset tracking of tablet when call endpoint check update 
+	3. Current version will store last process version of tablet 
+	4. Return VersionServer in Tracking view (Version server = Url.Version)
